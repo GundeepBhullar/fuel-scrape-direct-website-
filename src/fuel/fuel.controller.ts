@@ -6,10 +6,8 @@ export class FuelController {
   constructor(private readonly fuelService: FuelService) {}
  
   @Get('petrol')
-  getProducts(
-    @Query('state') state: string
-  ) {
-    return this.fuelService.getProducts(state);
+  getProducts() {
+    return this.fuelService.getFuelPrice();
   }
 
 
